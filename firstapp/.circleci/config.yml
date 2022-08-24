@@ -9,7 +9,7 @@ jobs:
     working_directory: ~/firstapp
     steps:
       - checkout:
-          path: ~/firstapp/firstapp
+          path: ~/firstapp
       - run:
           name: Update NPM
           command: ls
