@@ -15,7 +15,7 @@ jobs:
           command: ls
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "firstapp/package-lock.json" }}
+            - v1-dependencies-{{ checksum "package-lock.json" }}
             - v1-dependencies-
       - run: npm install
       - save_cache:
