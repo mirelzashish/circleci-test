@@ -12,7 +12,8 @@ jobs:
           path: ~/firstapp
       - run:
           name: Update NPM
-          command: npm install -g npm@latest
+          command: npm install npm@latest -g
+
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package-lock.json" }}
