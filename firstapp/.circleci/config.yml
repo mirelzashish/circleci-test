@@ -6,7 +6,7 @@ jobs:
   build:
     docker:
       - image: cimg/node:14.18.1
-    working_directory: ~/firstapp
+    working_directory: ~/firstapp/firstapp
     steps:
       - checkout:
           path: ~/firstapp
