@@ -17,11 +17,21 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package-lock.json" }}
             - v1-dependencies-
-      - run: npm install
+      - run:
+          name: install dependencies
+          command: npm install
       - save_cache:
           paths:
             - ./node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
+
+      - run:
+          name: App testing
+          command: npm run test
+      - run:
+          name: Build testing
+          command: npm run build
+
 
 workflows:
   build-deploy:
