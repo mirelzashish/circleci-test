@@ -5,7 +5,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/node:18.7.0
+      - image: cimg/node:16.17.0
     working_directory: ~/firstapp/firstapp
     steps:
       - checkout:
